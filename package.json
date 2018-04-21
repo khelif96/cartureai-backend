@@ -1,0 +1,34 @@
+{
+  "name": "cartureai-backend",
+  "version": "1.0.0",
+  "description": "Backend API to serve info information about identified car models",
+  "main": "app.js",
+  "scripts": {
+    "test": "jshint ./",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khelif96/cartureai-backend.git"
+  },
+  "keywords": [
+    "Google",
+    "Vision",
+    "cars"
+  ],
+  "author": "Mohamed Khelif",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khelif96/cartureai-backend/issues"
+  },
+  "homepage": "https://github.com/khelif96/cartureai-backend#readme",
+  "devDependencies": {
+    "jshint": "^2.9.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3"
+  }
+}
