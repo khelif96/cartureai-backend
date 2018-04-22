@@ -38,13 +38,41 @@ create table carTypes (
 
 );
 
+create table dealers (
+  dealerName varchar(255) not null,
+  dealerNumber int,
+  location text,
+  dealer_id int not null auto_increment primary key
+);
 
 create view V_carManufacturers
   as
   select
-    cm.car_id,
-    c.model ,
-    m.name,
-    from cars c
-       inner join carManufacturers cm on cm.car_id = c.car_id
-       inner join manufacturers m on m.manufacturer_id = cm.manufacturer_id;
+  cm.car_id as 'carManufacturer_id',
+  m.name as 'Manufacturer',
+  c.model as 'Model'
+
+  from cars c
+  inner join carManufacturers cm on cm.car_id = c.car_id
+  inner join manufacturers m on m.manufacturer_id = cm.manufacturer_id;
+
+
+  create table carsForSale(
+    car_id int,
+    dealer_id int,
+    price int,
+    leasePrice int,
+    foreign key (car_id) REFERENCES cars(car_id),
+    foreign key (dealer_id) REFERENCES dealers(dealer_id)
+  )
+
+  create view V_carsForSale
+    as
+    select
+    cfs.price as 'price',
+    cfs.leasePrice as 'leasePrice',
+    c.model as 'carName',
+    d.name as 'dealerName'
+    from carsForSale cfs
+    inner join cars c on cfs.car_id = c.car_id
+    inner join dealers d on cfs.dealer_id = d.dealer_id;

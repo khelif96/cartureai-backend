@@ -9,7 +9,7 @@ const s3Upload = require('../Controllers/s3Upload');
 
 router.get('/', apiHome.getApi);
 
-// router.get('/parseCarStats', carData.parseCarStats);
+router.post('/parseCarStats', carData.parseCarStats);
 
 router.post('/sign_s3', s3Upload.sign_s3 );
 router.use(apiHome.invalidPath);

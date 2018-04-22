@@ -32,3 +32,10 @@ insert into carTypes (car_id, type_id) values (2,3);
 insert into carTypes (car_id, type_id) values (3,1);
 insert into carTypes (car_id, type_id) values (4,4);
 insert into carTypes (car_id, type_id) values (5,5);
+
+
+insert into dealers (dealerName, dealerNumber,location) values ('Bay Ridge Honda',7188364600,'8801 4th Ave');
+  insert into dealers (dealerName, dealerNumber,location) values ('Bay Ridge Toyota Sales',8555678901, '6401 6th Ave');
+
+insert into carsForSale(car_id, dealer_id, price,leasePrice) values (1,1,23570,249);
+  insert into carsForSale(car_id, dealer_id, price,leasePrice) values (1,1,22430,199);

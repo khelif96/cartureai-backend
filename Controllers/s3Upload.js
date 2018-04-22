@@ -19,7 +19,7 @@ exports.sign_s3 = (req,res) => {
   const fileName = rack();
   const type = req.body.type;
   const fileType = req.body.fileType;
-  const key = 'res/' + cars + '/' + fileName;
+  const key = 'cars/' +  fileName;
 
   const s3Params = {
     Bucket: S3_BUCKET,
@@ -41,4 +41,3 @@ exports.sign_s3 = (req,res) => {
     res.json({success:true, data:{returnData}});
   });
 }
-};
