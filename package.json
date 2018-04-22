@@ -26,9 +26,12 @@
     "jshint": "^2.9.5"
   },
   "dependencies": {
+    "aws-sdk": "^2.226.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "dotenv": "^5.0.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "hat": "0.0.3",
+    "mysql": "^2.15.0"
   }
 }
