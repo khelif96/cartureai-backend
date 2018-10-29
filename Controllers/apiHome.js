@@ -1,7 +1,7 @@
 /* jshint esversion: 6 */
 
 exports.getApi = (req, res) => {
-    res.json({message: "Welcome to the cartureAI API"});
+    res.json({message: "Welcome to the one and only cartureAI API"});
     res.status(200);
   };
 
